@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projet PFE - ISIMM & Délice Danone</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Projet PFE - ISIMM & Délice Danone</h1>
+  </header>
+
+  <main>
+    <section class="menu">
+      <div class="circle" data-section="accueil">
+        <img src="acceuil.jpeg" alt="Accueil" />
+        <p>Accueil</p>
+      </div>
+      <div class="circle" data-section="defauts">
+        <img src="defaut.jpg" alt="Défauts" />
+        <p>Défauts</p>
+      </div>
+      <div class="circle" data-section="stats">
+        <img src="stats.jpeg" alt="Statistiques" />
+        <p>Statistiques</p>
+      </div>
+      <div class="circle" data-section="cdc">
+        <img src="R.jpeg" alt="Cahier des charges" />
+        <p>Cahier des charges</p>
+      </div>
+    </section>
+
+    <section id="accueil" class="content-section visible">
+      <h2>Bienvenue</h2>
+      <pNous sommes deux étudiantes en systèmes embarqués à l'Institut Supérieur d'Informatique et de Mathématique de Monastir (ISIMM), Khayat Ghofrane et Benothmen Insaf, actuellement en stage de fin d'études (PFE) au sein de l'entreprise Délice Danone.</p>
+      <p>Dans le cadre de ce projet, nous travaillons sur l'intégration d'un protocole de communication de filière vers Profinet, afin d'améliorer la connectivité et l'efficacité des équipements industriels.</p>
+      <p>Par ailleurs, nous avons créé ce site dans le but de faciliter l'accès à l'information et de servir de support pratique pour les futurs stagiaires en automatisme au sein de la société Délice Danone.</p>
+      <div class="logos">
+        <img src="delice.jpeg" alt="Délice Danone" />
+        <img src="isimm.webp" alt="ISIMM" />
+      </div>
+    </section>
+
+    <section id="defauts" class="content-section hidden">
+  <h2>Liste des défauts</h2>
+  <div id="defaut-search-container">
+    <input type="text" id="search-input" placeholder="Rechercher un défaut..." />
+    <button id="search-button">Rechercher</button>
+  </div>
+  <ul id="liste-defauts"></ul>
+</section>
+
+
+    <section id="stats" class="content-section hidden">
+      <h2>Statistiques</h2>
+      <canvas id="chartStats" width="400" height="300"></canvas>
+    </section>
+
+    <section id="cdc" class="content-section hidden">
+      <h2>Cahier des charges</h2>
+      <h3>Intitulé du projet</h3>
+      <p><strong>Modernisation de la communication automate-variateur de la conditionneuse ERCA6</strong></p>
+      <h3>Organisme d’accueil</h3>
+      <p>STIAL – Délice Danone, Soliman, Tunisie</p>
+      <h3>Contexte du projet</h3>
+      <p>
+        La conditionneuse ERCA6 joue un rôle clé dans la ligne de production de STIAL, en assurant l’introduction du décor sur les pots de yaourt. Actuellement, la communication entre l’automate Siemens S7-400 et le variateur SEW MDX61B utilise une liaison TOR filaire. Ce système présente plusieurs limites : câblage complexe et encombrant, paramètres moteurs figés, absence de retour d’état précis en cas de défaut, et maintenance difficile. Une modernisation est donc nécessaire pour fiabiliser, simplifier et améliorer la communication ainsi que le contrôle.
+      </p>
+      <h3>Problématique</h3>
+      <ul>
+        <li>Communication ancienne et peu flexible entre automate et variateur via signaux TOR filaires.</li>
+        <li>Paramètres moteurs (vitesse, position, etc.) figés et non modifiables en fonctionnement.</li>
+        <li>Absence d’accès à l’état machine, rendant le diagnostic des défauts difficile.</li>
+      </ul>
+      <h3>Objectifs</h3>
+      <ul>
+        <li>Remplacer la communication filaire par une communication industrielle moderne via Profinet.</li>
+        <li>Rendre les paramètres moteurs dynamiquement configurables (vitesse, position, accélération, etc.).</li>
+        <li>Mettre en place un suivi en temps réel des défauts et états du variateur.</li>
+        <li>Intégrer tous les équipements dans un réseau centralisé avec supervision et diagnostic.</li>
+        <li>Développer une application mobile pour recevoir à distance les notifications de défauts, facilitant l’intervention rapide et la continuité de la production.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+/* Reset & basics */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f8fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin: 20px 0;
+  text-align: center;
+  color: #005ea2;
+  font-weight: 700;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+}
+
+/* Menu des cercles */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  background: #0073e6;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.circle:hover {
+  background: #005ea2;
+}
+
+.circle img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.circle p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Sections contenu */
+.content-section {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.content-section.visible {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Logos accueil */
+.logos {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.logos img {
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Défauts */
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  margin: 15px 0 20px;
+  border-radius: 25px;
+  border: 1.8px solid #0073e6;
+  font-size: 1rem;
+  outline-color: #005ea2;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: #003f7f;
+}
+
+#liste-defauts {
+  list-style-type: none;
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 10px;
+  border-top: 1px solid #ddd;
+}
+
+#liste-defauts li {
+  padding: 8px 6px;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Cahier des charges */
+#cdc h3 {
+  color: #005ea2;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+#cdc ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 8px;
+}
+
+#cdc ul li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Statistiques */
+#chartStats {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
